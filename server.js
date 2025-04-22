@@ -9,6 +9,11 @@ app.use('/', schoolRoutes);
 
 module.exports = app;
 
+app.get('/', (req, res) => {
+  res.send('Server is running!');
+});
+
+
 if (require.main === module) {
   const PORT = process.env.PORT || 3000;
   app.listen(PORT, () => {
