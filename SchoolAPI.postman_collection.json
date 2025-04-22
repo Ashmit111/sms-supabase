@@ -1,0 +1,41 @@
+{
+    "info": {
+      "name": "School Management API",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+      {
+        "name": "Add School",
+        "request": {
+          "method": "POST",
+          "header": [{ "key": "Content-Type", "value": "application/json" }],
+          "url": { "raw": "http://{{host}}/api/addSchool", "host": ["{{host}}"], "path": ["api","addSchool"] },
+          "body": {
+            "mode": "raw",
+            "raw": "{\"name\":\"Greenwood High\",\"address\":\"123 Elm St\",\"latitude\":12.9716,\"longitude\":77.5946}"
+          }
+        },
+        "response": []
+      },
+      {
+        "name": "List Schools Nearby",
+        "request": {
+          "method": "GET",
+          "url": {
+            "raw": "http://{{host}}/api/listSchools?latitude=12.9716&longitude=77.5946",
+            "host": ["{{host}}"],
+            "path": ["api","listSchools"],
+            "query": [
+              { "key": "latitude", "value": "12.9716" },
+              { "key": "longitude", "value": "77.5946" }
+            ]
+          }
+        },
+        "response": []
+      }
+    ],
+    "variable": [
+      { "key": "host", "value": "localhost:3000" }
+    ]
+  }
+  
