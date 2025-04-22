@@ -5,7 +5,7 @@ const schoolRoutes = require('./routes/school.js');
 
 app.use(cors());
 app.use(express.json());
-app.use('/', schoolRoutes);
+app.use('/api', schoolRoutes);
 
 module.exports = app;
 
